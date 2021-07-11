@@ -1,1 +1,1 @@
-# smart-budget
+# project-foodability
