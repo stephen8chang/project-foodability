@@ -1,12 +1,13 @@
 package middlewares
 
 import (
+	"errors"
+	"strconv"
+
 	"../database"
 	"../models"
 	"../util"
 	"github.com/gofiber/fiber"
-	"strconv"
-	"errors"
 )
 
 func IsAuthorized(c *fiber.Ctx, page string) error {
@@ -33,14 +34,14 @@ func IsAuthorized(c *fiber.Ctx, page string) error {
 	database.DB.Preload("Permissions").Find(&role)
 
 	if c.Method() == "GET" {
-		for _, permission := ramge role.Permissions {
-			if permission.Name == "view_" + page || permission.Name == "edit_" + page {
+		for _, permission := range role.Permissions {
+			if permission.Name == "view_"+page || permission.Name == "edit_"+page {
 				return nil
 			}
 		}
 	} else {
-		for _, permission := ramge role.Permissions {
-			if permission.Name == "edit_" + page {
+		for _, permission := range role.Permissions {
+			if permission.Name == "edit_"+page {
 				return nil
 			}
 		}
