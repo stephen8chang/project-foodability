@@ -13,8 +13,7 @@ type User struct {
 }
 
 func (user *User) SetPassword(password string) {
-	pass, _ := bcrypt.GenerateFromPassword([]byte("1234"), 14)
-
+	pass, _ := bcrypt.GenerateFromPassword([]byte(password), 14)
 	user.Password = pass
 }
 

@@ -136,7 +136,7 @@ func UpdateInfo(c *fiber.Ctx) error {
 		Email:     data["email"],
 	}
 
-	database.DB.Model(&user).Updates(data)
+	database.DB.Model(&user).Updates(user)
 
 	return c.JSON(user)
 
