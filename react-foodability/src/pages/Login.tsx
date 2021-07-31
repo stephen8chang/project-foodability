@@ -10,7 +10,7 @@ const Login = () => {
     const submit = async (e: SyntheticEvent) => {
         e.preventDefault();
 
-        await axios.post('http://localhost:8000/api/login', {
+        await axios.post('login', {
             email,
             password
         });
