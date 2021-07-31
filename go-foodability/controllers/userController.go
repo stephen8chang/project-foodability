@@ -4,7 +4,6 @@ import (
 	"strconv"
 
 	"../database"
-	"../middlewares"
 	"../models"
 	"github.com/gofiber/fiber"
 )
@@ -20,9 +19,9 @@ func AllUsers(c *fiber.Ctx) error {
 
 // create another person's user, not same as register
 func CreateUser(c *fiber.Ctx) error {
-	if err := middlewares.IsAuthorized(c, "users"); err != nil {
-		return err
-	}
+	// if err := middlewares.IsAuthorized(c, "users"); err != nil {
+	// 	return err
+	// }
 
 	var user models.User
 
@@ -38,9 +37,9 @@ func CreateUser(c *fiber.Ctx) error {
 }
 
 func GetUser(c *fiber.Ctx) error {
-	if err := middlewares.IsAuthorized(c, "users"); err != nil {
-		return err
-	}
+	// if err := middlewares.IsAuthorized(c, "users"); err != nil {
+	// 	return err
+	// }
 
 	id, _ := strconv.Atoi(c.Params("id"))
 
@@ -54,9 +53,9 @@ func GetUser(c *fiber.Ctx) error {
 }
 
 func UpdateUser(c *fiber.Ctx) error {
-	if err := middlewares.IsAuthorized(c, "users"); err != nil {
-		return err
-	}
+	// if err := middlewares.IsAuthorized(c, "users"); err != nil {
+	// 	return err
+	// }
 
 	id, _ := strconv.Atoi(c.Params("id"))
 
@@ -74,9 +73,9 @@ func UpdateUser(c *fiber.Ctx) error {
 }
 
 func DeleteUser(c *fiber.Ctx) error {
-	if err := middlewares.IsAuthorized(c, "users"); err != nil {
-		return err
-	}
+	// if err := middlewares.IsAuthorized(c, "users"); err != nil {
+	// 	return err
+	// }
 
 	id, _ := strconv.Atoi(c.Params("id"))
 

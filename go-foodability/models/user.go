@@ -11,7 +11,7 @@ type User struct {
 	LastName  string `json:"last_name"`
 	Email     string `json:"email" gorm:"unique"`
 	Password  []byte `json:"-"`
-	RoleId    uint   `json:"role_id"`
+	RoleId    uint   `json:"role_id,string"`
 	Role      Role   `json:"role" gorm:"foreignKey:RoleId"`
 }
 
