@@ -10,9 +10,9 @@ import (
 )
 
 func AllUsers(c *fiber.Ctx) error {
-	if err := middlewares.IsAuthorized(c, "users"); err != nil {
-		return err
-	}
+	// if err := middlewares.IsAuthorized(c, "users"); err != nil {
+	// 	return err
+	// }
 
 	page, _ := strconv.Atoi(c.Query("page", "1"))
 	return c.JSON(models.Paginate(database.DB, &models.User{}, page))
