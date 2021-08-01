@@ -7,7 +7,7 @@ type Product struct {
 	Title       string  `json:"title"`
 	Description string  `json:"description"`
 	Image       string  `json:"image"`
-	Price       float64 `json:"price"`
+	Price       float64 `json:"price,string"`
 }
 
 func (product *Product) Count(db *gorm.DB) int64 {
