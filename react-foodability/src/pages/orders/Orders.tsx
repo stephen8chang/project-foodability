@@ -49,7 +49,7 @@ const Orders = () => {
     return (
         <Wrapper>
             <div className="pt-3 pb-2 mb-3 border-bottom">
-                <a href="#" className="btn btn-sm btn-outline-secondary" onClick={expcsv}>Export</a>
+                <a href="#" className="btn btn-sm btn-outline-secondary" onClick={expcsv}>Export as a CSV</a>
             </div>
 
             <div className="table-responsive">

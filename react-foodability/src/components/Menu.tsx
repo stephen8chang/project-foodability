@@ -23,7 +23,7 @@ const Menu = () => {
               </li>
               <li className="nav-item">
                 <NavLink to={"/products"} className="nav-link" href="#">
-                  Products
+                  Restaurants
                 </NavLink>
               </li>
               <li className="nav-item">

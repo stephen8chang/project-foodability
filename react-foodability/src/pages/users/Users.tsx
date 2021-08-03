@@ -31,7 +31,7 @@ const Users = () => {
     return (
         <Wrapper>
             <div className="pt-3 pb-2 mb-3 border-bottom">
-                <Link to="/users/create" href="#" className="btn btn-sm btn-outline-secondary">Add</Link>
+                <Link to="/users/create" href="#" className="btn btn-sm btn-outline-secondary">Add User</Link>
             </div>
             <div>
                 <div className="table-responsive">
