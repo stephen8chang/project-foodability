@@ -4,5 +4,4 @@
 </p>
 
 ### About
-- This is the admin application for Project Foodability.
-- Here, you can maintain the users, roles, restaurants, and orders within the Foodability app.
+This is the admin application for Project Foodability. Here, you can maintain the users, roles, restaurants, and orders within the Foodability app.
